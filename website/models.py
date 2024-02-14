@@ -1,11 +1,13 @@
-from . import db
-from datetime import datetime
+from flask_sqlalchemy import SQLAlchemy
 
-class Todo(db.Model):
-    id = db.Column(db.Integer, primary_key = True)
-    task = db.Column(db.String(300), unique = True)
-    complete = db.Column(db.Boolean, default = False)
-    date_created = db.Column(db.DateTime, default=datetime.utcnow)
-    date_edited = db.Column(db.DateTime, onupdate=datetime.utcnow)
-    date_completed = db.Column(db.DateTime, default=None)
-    # date_deleted = db.Column(db.DateTime, default=datetime.utcnow)
+db = SQLAlchemy()
+
+class WeeklyData(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    week = db.Column(db.String(10), nullable=False)
+    total_income = db.Column(db.Float, nullable=False)
+    highest_spend = db.Column(db.Float, nullable=False)
+    best_selling_item = db.Column(db.String(50), nullable=False)
+    worst_selling_item = db.Column(db.String(50), nullable=False)
+    mvp_staff_member = db.Column(db.String(50), nullable=False)
+    average_basket_spend = db.Column(db.Float, nullable=False)
