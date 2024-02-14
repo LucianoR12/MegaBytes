@@ -112,7 +112,7 @@ a:hover {
   -moz-transition: all 0.5s;  
   -webkit-transition: all 0.5s;
 }
-.pcss3t > .tab-content-first:checked ~ ul .tab-content-first,
+.pcss3t > .tab-content-1:checked ~ ul .tab-content-1,
 .pcss3t > .tab-content-2:checked ~ ul .tab-content-2,
 .pcss3t > .tab-content-3:checked ~ ul .tab-content-3,
 .pcss3t > .tab-content-4:checked ~ ul .tab-content-4,
@@ -121,7 +121,7 @@ a:hover {
 .pcss3t > .tab-content-7:checked ~ ul .tab-content-7,
 .pcss3t > .tab-content-8:checked ~ ul .tab-content-8,
 .pcss3t > .tab-content-9:checked ~ ul .tab-content-9,
-.pcss3t > .tab-content-last:checked ~ ul .tab-content-last {
+.pcss3t > .tab-content-10:checked ~ ul .tab-content-10 {
   z-index: 1;
   top: 0;
   left: 0;
@@ -146,12 +146,12 @@ a:hover {
   display: none;
   height: auto !important;
 }
-.pcss3t-height-auto > .tab-content-first:checked ~ ul .tab-content-first,
+.pcss3t-height-auto > .tab-content-1:checked ~ ul .tab-content-1,
 .pcss3t-height-auto > .tab-content-2:checked ~ ul .tab-content-2,
 .pcss3t-height-auto > .tab-content-3:checked ~ ul .tab-content-3,
 .pcss3t-height-auto > .tab-content-4:checked ~ ul .tab-content-4,
 .pcss3t-height-auto > .tab-content-5:checked ~ ul .tab-content-5,
-.pcss3t-height-auto > .tab-content-last:checked ~ ul .tab-content-last {
+.pcss3t-height-auto > .tab-content-10:checked ~ ul .tab-content-10 {
   display: block;
 }
 

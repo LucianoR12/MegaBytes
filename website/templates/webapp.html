@@ -51,22 +51,21 @@
         <label for="tab9"><i class="icon-coffee"></i>WEEK</label>
 
 
-        <input type="radio" name="pcss3t" id="tab10" class="tab-content-last">
+        <input type="radio" name="pcss3t" id="tab10" class="tab-content-10">
         <label for="tab10"><i class="icon-home"></i>STAFF</label>
 
 
         <ul>
           <li class="tab-content tab-content-1 typography">
             <h1>Home</h1>
-            <p>Section For Home Information
-</p>
-            <p>Please Note all drinks can have alternative Milk replaced for alergy purposes, we stock Soy, Oat, Almond & Coconut our whipped cream Belgian Chocolate and marshmellows are all vegan friendly</p>
-            <p class="text-right"><em>Find out more about Nikola Tesla from <a href="http://en.wikipedia.org/wiki/Nikola_Tesla" target="_blank">Wikipedia</a>.</em></p>
+            <p>Statistical Data
+              <img src="{{ url_for('static', filename='images/week.png') }}" alt="Statistical Data">
+            </p>
           </li>
 
 
           <li class="tab-content tab-content-2 typography">
-            <h1>Monday</h1>
+            <h1>Monday Data</h1>
             <p>Statistical Data For Monday
               <img src="{{ url_for('static', filename='images/mon.png') }}" alt="Statistical Data">
             </p>
@@ -74,7 +73,7 @@
 
 
           <li class="tab-content tab-content-3 typography">
-            <h1>Tuesday</h1>
+            <h1>Tuesday Data</h1>
             <p>Statistical Data For Tuesday
               <img src="{{ url_for('static', filename='images/tue.png') }}" alt="Statistical Data">
             </p>
@@ -82,7 +81,7 @@
 
 
           <li class="tab-content tab-content-4 typography">
-            <h1>Wednesday</h1>
+            <h1>Wednesday Data</h1>
             <p>Statistical Data For Wednesday
               <img src="{{ url_for('static', filename='images/wed.png') }}" alt="Statistical Data">
             </p>
@@ -90,7 +89,7 @@
 
 
           <li class="tab-content tab-content-5 typography">
-            <h1>thursday</h1>
+            <h1>Thursday Data</h1>
             <p>Statistical Data For Thursday
               <img src="{{ url_for('static', filename='images/thu.png') }}" alt="Statistical Data">
             </p>
@@ -98,7 +97,7 @@
 
 
           <li class="tab-content tab-content-6 typography">
-            <h1>Friday</h1>
+            <h1>Friday Data</h1>
             <p>Statistical Data For Friday
               <img src="{{ url_for('static', filename='images/fri.png') }}" alt="Statistical Data">
             </p>
@@ -106,7 +105,7 @@
 
 
           <li class="tab-content tab-content-7 typography">
-            <h1>Saturday</h1>
+            <h1>Saturday Data</h1>
             <p>Statistical Data For Saturday
               <img src="{{ url_for('static', filename='images/sat.png') }}" alt="Statistical Data">
             </p>
@@ -114,7 +113,7 @@
 
 
           <li class="tab-content tab-content-8 typography">
-            <h1>Sunday</h1>
+            <h1>Sunday Data</h1>
             <p>Statistical Data For Sunday
               <img src="{{ url_for('static', filename='images/sun.png') }}" alt="Statistical Data">
             </p>
@@ -129,7 +128,7 @@
           </li> -->
 
 
-          <li class="tab-content tab-content-last typography">
+          <li class="tab-content tab-content-10 typography">
             <h1>Staff</h1>
             <p>Statistical Data For Staff
               <img src="{{ url_for('static', filename='images/week.png') }}" alt="Statistical Data">
@@ -140,41 +139,53 @@
             <div class="typography">
                 <h1>Weekly Data</h1>
 
-                <!-- Form to submit weekly data -->
+
                 <form action="/weekly_data" method="POST" class="screen-content">
                     <div class="form-group">
                         <label for="week">Day Of The Week:</label>
                         <input type="text" name="week" placeholder="Enter week" required>
                     </div>
+
+
                     <div class="form-group">
                         <label for="total_income">Total Income:</label>
                         <input type="number" name="total_income" placeholder="Enter total income" required>
                     </div>
+
+
                     <div class="form-group">
                         <label for="highest_spend">Highest Spend:</label>
                         <input type="number" name="highest_spend" placeholder="Enter highest spend" required>
                     </div>
+
+
                     <div class="form-group">
                         <label for="best_selling_item">Best Selling Item:</label>
                         <input type="text" name="best_selling_item" placeholder="Enter best selling item" required>
                     </div>
+
+
                     <div class="form-group">
                         <label for="worst_selling_item">Worst Selling Item:</label>
                         <input type="text" name="worst_selling_item" placeholder="Enter worst selling item" required>
                     </div>
+
+
                     <div class="form-group">
                         <label for="mvp_staff_member">MVP Staff Member:</label>
                         <input type="text" name="mvp_staff_member" placeholder="Enter MVP staff member" required>
                     </div>
+
+
                     <div class="form-group">
                         <label for="average_basket_spend">Average Basket Spend:</label>
                         <input type="number" name="average_basket_spend" placeholder="Enter average basket spend" required>
                     </div>
 
-                    <button type="submit">Submit Weekly Data</button>
+
+                    <button type="submit">Submit Data</button>
                 </form>
 
-                <!-- Display existing weekly data (you may need to update this based on the new data structure) -->
                 <img src="{{ url_for('static', filename='mainplot.png') }}" alt="Weekly Income Chart">
 
                 <div class="existing-weekly-data">

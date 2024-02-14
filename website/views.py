@@ -1,5 +1,7 @@
 from flask import Blueprint, redirect, render_template, url_for, request, jsonify
 from .models import WeeklyData, db
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 my_view = Blueprint("my_view", __name__)
