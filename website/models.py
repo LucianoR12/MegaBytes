@@ -4,7 +4,7 @@ db = SQLAlchemy()
 
 class WeeklyData(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    week = db.Column(db.String(10), nullable=False)
+    day = db.Column(db.String(10), nullable=False)
     total_items = db.Column(db.Float, nullable=False)
     most_popular_item = db.Column(db.String(10), nullable=False)
     least_popular_item = db.Column(db.String(10), nullable=False)

@@ -3,30 +3,40 @@ from .models import WeeklyData, db
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from collections import defaultdict
 
 my_view = Blueprint("my_view", __name__)
-
 
 @my_view.route('/')
 def index():
     weekly_data = WeeklyData.query.all()
-    generate_weekly_income_chart(weekly_data)
-    return render_template('webapp.html', weekly_data=weekly_data)
+    data_by_day = defaultdict(list)
+    for data in weekly_data:
+        data_by_day[data.day].append(data)
+    current_day = 'Monday'
+
+    return render_template('webapp.html', weekly_data=weekly_data, data_by_day=data_by_day, current_day=current_day)
+
+# @my_view.route('/')
+# def index():
+#     weekly_data = WeeklyData.query.all()
+#     generate_weekly_income_chart(weekly_data)
+#     return render_template('webapp.html', weekly_data=weekly_data)
 
 def generate_weekly_income_chart(weekly_data):
-    weeks = [data.week for data in weekly_data]
-    total_income = [data.total_income for data in weekly_data]
+    weeks = [data.day for data in weekly_data]
+    total_cost = [data.total_cost for data in weekly_data]
 
-    plt.bar(weeks, total_income, color='skyblue')
+    plt.bar(weeks, total_cost, color='skyblue')
     plt.xlabel('Week')
-    plt.ylabel('Total Income')
-    plt.title('Weekly Total Income')
+    plt.ylabel('Total Cost')
+    plt.title('Weekly Total Cost')
 
     plt.savefig("website/static/mainplot.png", format='png')
 
 @my_view.route('/weekly_data', methods=['POST'])
 def submit_weekly_data():
-    week = request.form['week']
+    day = request.form['day']
     total_items = float(request.form['total_items'])
     most_popular_item = request.form['most_popular_item']
     least_popular_item = request.form['least_popular_item']
@@ -38,7 +48,7 @@ def submit_weekly_data():
     most_popular_staff = request.form['most_popular_staff']
 
     new_weekly_data = WeeklyData(
-    week = week,
+    day = day,
     total_items = total_items,
     most_popular_item = most_popular_item,
     least_popular_item = least_popular_item,

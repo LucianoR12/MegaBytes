@@ -16,7 +16,7 @@
 
         <div class="pcss3t pcss3t-effect-scale pcss3t-theme-1">
             <input type="radio" name="pcss3t" checked id="tab1" class="tab-content-1">
-            <label for="tab1"><i class="icon-home"></i>Home</label>
+            <label for="tab1"><i class="icon-home"></i>HOME</label>
 
 
         <input type="radio" name="pcss3t" id="tab2" class="tab-content-2">
@@ -59,7 +59,8 @@
           <li class="tab-content tab-content-1 typography">
             <h1>Home</h1>
             <p>Statistical Data
-              <img src="{{ url_for('static', filename='images/week.png') }}" alt="Statistical Data">
+              <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Week Data">
+              <img src="{{ url_for('static', filename='images/palette.png') }}" alt="Week Data">
             </p>
           </li>
 
@@ -67,7 +68,8 @@
           <li class="tab-content tab-content-2 typography">
             <h1>Monday Data</h1>
             <p>Statistical Data For Monday
-              <img src="{{ url_for('static', filename='images/mon.png') }}" alt="Statistical Data">
+              <img src="{{ url_for('static', filename='images/mon_p.png') }}" alt="Monday Data">
+              <img src="{{ url_for('static', filename='images/mon_s.png') }}" alt="Monday Data">
             </p>
           </li>
 
@@ -75,7 +77,8 @@
           <li class="tab-content tab-content-3 typography">
             <h1>Tuesday Data</h1>
             <p>Statistical Data For Tuesday
-              <img src="{{ url_for('static', filename='images/tue.png') }}" alt="Statistical Data">
+              <img src="{{ url_for('static', filename='images/tue_p.png') }}" alt="Tuesday Data">
+              <img src="{{ url_for('static', filename='images/tue_s.png') }}" alt="Tuesday Data">
             </p>
           </li>
 
@@ -83,7 +86,8 @@
           <li class="tab-content tab-content-4 typography">
             <h1>Wednesday Data</h1>
             <p>Statistical Data For Wednesday
-              <img src="{{ url_for('static', filename='images/wed.png') }}" alt="Statistical Data">
+              <img src="{{ url_for('static', filename='images/wed_p.png') }}" alt="Wednesday Data">
+              <img src="{{ url_for('static', filename='images/wed_s.png') }}" alt="Wednesday Data">
             </p>
           </li>
 
@@ -91,7 +95,8 @@
           <li class="tab-content tab-content-5 typography">
             <h1>Thursday Data</h1>
             <p>Statistical Data For Thursday
-              <img src="{{ url_for('static', filename='images/thu.png') }}" alt="Statistical Data">
+              <img src="{{ url_for('static', filename='images/thu_p.png') }}" alt="Thursday Data">
+              <img src="{{ url_for('static', filename='images/thu_s.png') }}" alt="Thursday Data">
             </p>
           </li>
 
@@ -99,7 +104,8 @@
           <li class="tab-content tab-content-6 typography">
             <h1>Friday Data</h1>
             <p>Statistical Data For Friday
-              <img src="{{ url_for('static', filename='images/fri.png') }}" alt="Statistical Data">
+              <img src="{{ url_for('static', filename='images/fri_p.png') }}" alt="Friday Data">
+              <img src="{{ url_for('static', filename='images/fri_s.png') }}" alt="Friday Data">
             </p>
           </li>
 
@@ -107,7 +113,8 @@
           <li class="tab-content tab-content-7 typography">
             <h1>Saturday Data</h1>
             <p>Statistical Data For Saturday
-              <img src="{{ url_for('static', filename='images/sat.png') }}" alt="Statistical Data">
+              <img src="{{ url_for('static', filename='images/sat_p.png') }}" alt="Saturday Data">
+              <img src="{{ url_for('static', filename='images/sat_s.png') }}" alt="Saturday Data">
             </p>
           </li>
 
@@ -115,7 +122,8 @@
           <li class="tab-content tab-content-8 typography">
             <h1>Sunday Data</h1>
             <p>Statistical Data For Sunday
-              <img src="{{ url_for('static', filename='images/sun.png') }}" alt="Statistical Data">
+              <img src="{{ url_for('static', filename='images/sun_p.png') }}" alt="Sunday Data">
+              <img src="{{ url_for('static', filename='images/sun_p.png') }}" alt="Sunday Data">
             </p>
           </li>
 
@@ -123,7 +131,7 @@
           <!-- <li class="tab-content tab-content-9 typography">
             <h1>Week</h1>
             <p>Statistical Data For Week
-              <img src="{{ url_for('static', filename='images/week.png') }}" alt="Statistical Data">
+              <img src="{{ url_for('static', filename='images/week_p.png') }}" alt="Week Data">
             </p>
           </li> -->
 
@@ -131,7 +139,7 @@
           <li class="tab-content tab-content-10 typography">
             <h1>Staff Data</h1>
             <p>Statistical Data For Staff
-              <img src="{{ url_for('static', filename='images/week.png') }}" alt="Statistical Data">
+              <img src="{{ url_for('static', filename='images/week_s.png') }}" alt="Week Data">
             </p>
           </li>
 
@@ -143,8 +151,8 @@
 
                 <form action="/weekly_data" method="POST" class="screen-content">
                     <div class="form-group">
-                        <label for="week">Week:</label>
-                        <input type="number" name="week" placeholder="Enter Week" required>
+                        <label for="day">Day:</label>
+                        <input type="text" name="day" placeholder="Enter Day" required>
                     </div>
 
 
@@ -196,7 +204,6 @@
                     </div>
 
 
-
                     <div class="form-group">
                       <label for="most_popular_staff">Most Popular Staff:</label>
                       <input type="text" name="most_popular_staff" placeholder="Enter Most Popular Staff" required>
@@ -207,27 +214,29 @@
                 </form>
 
 
-                <img src="{{ url_for('static', filename='mainplot.png') }}" alt="Weekly Income Chart">
+                <!-- <img src="{{ url_for('static', filename='mainplot.png') }}" alt="Weekly Income Chart"> -->
 
 
                 <div class="existing-weekly-data">
-                    {% for data in weekly_data %}
-                        <div class="data">
-                            <p><strong>Week {{ data.week }}</strong>
-                            <br>Total Items: ${{ data.total_items }}
-                            <br>Most Popular Items: ${{ data.most_popular_items }}
-                            <br>Least Popular Items: ${{ data.least_populat_items }}
-                            <br>Total Cost: ${{ data.total_cost }}
-                            <br>Max Cost: ${{ data.max_cost }}
-                            <br>Min Cost: ${{ data.min_cost }}
-                            <br>Average Cost: ${{ data.average_cost }}
-                            <br>Least Popular Payment: ${{ data.least_popular_payment }}
-                            <br>Most Popular Staff: ${{ data.most_popular_staff }}
-                            </p>
-                        </div>
-
-
-                    {% endfor %}
+                  {% for day, data_list in data_by_day.items() %}
+                      <div class="tab-content-{{ day|lower }} typography" {% if current_day == day %}style="display: block;"{% endif %}>
+                          <h1>{{ day }}</h1>
+                          {% for data in data_list %}
+                              <p><strong>Day {{ data.day }}</strong>
+                                  <br>Total Items: {{ data.total_items }}
+                                  <br>Most Popular Items: {{ data.most_popular_item }}
+                                  <br>Least Popular Items: {{ data.least_popular_item }}
+                                  <br>Total Cost: £{{ data.total_cost }}
+                                  <br>Max Cost: £{{ data.max_cost }}
+                                  <br>Min Cost: £{{ data.min_cost }}
+                                  <br>Average Cost: £{{ data.average_cost }}
+                                  <br>Least Popular Payment: {{ data.least_popular_payment }}
+                                  <br>Most Popular Staff: {{ data.most_popular_staff }}
+                              </p>
+                          {% endfor %}
+                      </div>
+                  {% endfor %}
+              </div>
                 </div>
             </div>
         </li>
