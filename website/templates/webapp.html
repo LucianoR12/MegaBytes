@@ -129,12 +129,13 @@
 
 
           <li class="tab-content tab-content-10 typography">
-            <h1>Staff</h1>
+            <h1>Staff Data</h1>
             <p>Statistical Data For Staff
               <img src="{{ url_for('static', filename='images/week.png') }}" alt="Statistical Data">
             </p>
           </li>
 
+          
           <li class="tab-content tab-content-9 typography">
             <div class="typography">
                 <h1>Weekly Data</h1>
@@ -142,58 +143,90 @@
 
                 <form action="/weekly_data" method="POST" class="screen-content">
                     <div class="form-group">
-                        <label for="week">Day Of The Week:</label>
-                        <input type="text" name="week" placeholder="Enter week" required>
+                        <label for="week">Week:</label>
+                        <input type="number" name="week" placeholder="Enter Week" required>
                     </div>
 
 
                     <div class="form-group">
-                        <label for="total_income">Total Income:</label>
-                        <input type="number" name="total_income" placeholder="Enter total income" required>
+                      <label for="total_items">Total Items:</label>
+                      <input type="number" name="total_items" placeholder="Enter Total Items" required>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label for="most_popular_item">Most Popular Item:</label>
+                    <input type="text" name="most_popular_item" placeholder="Enter Most Popular Item" required>
+                </div>
+
+
+                    <div class="form-group">
+                        <label for="least_popular_item">Least Popular Item:</label>
+                        <input type="text" name="least_popular_item" placeholder="Enter Least Popular Item" required>
                     </div>
 
 
                     <div class="form-group">
-                        <label for="highest_spend">Highest Spend:</label>
-                        <input type="number" name="highest_spend" placeholder="Enter highest spend" required>
+                        <label for="total_cost">Total Cost:</label>
+                        <input type="number" name="total_cost" placeholder="Enter Total Cost" required>
                     </div>
 
 
                     <div class="form-group">
-                        <label for="best_selling_item">Best Selling Item:</label>
-                        <input type="text" name="best_selling_item" placeholder="Enter best selling item" required>
+                        <label for="max_cost">Max Cost:</label>
+                        <input type="number" name="max_cost" placeholder="Enter Max Cost" required>
                     </div>
 
 
                     <div class="form-group">
-                        <label for="worst_selling_item">Worst Selling Item:</label>
-                        <input type="text" name="worst_selling_item" placeholder="Enter worst selling item" required>
-                    </div>
+                      <label for="min_cost">Min Cost:</label>
+                      <input type="number" name="min_cost" placeholder="Enter Min Cost" required>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label for="average_cost">Average Cost:</label>
+                    <input type="number" name="average_cost" placeholder="Enter Average Cost" required>
+                </div>
 
 
                     <div class="form-group">
-                        <label for="mvp_staff_member">MVP Staff Member:</label>
-                        <input type="text" name="mvp_staff_member" placeholder="Enter MVP staff member" required>
+                        <label for="least_popular_payment">Least Popular Payment:</label>
+                        <input type="text" name="least_popular_payment" placeholder="Enter Least Popular Payment" required>
                     </div>
+
 
 
                     <div class="form-group">
-                        <label for="average_basket_spend">Average Basket Spend:</label>
-                        <input type="number" name="average_basket_spend" placeholder="Enter average basket spend" required>
-                    </div>
+                      <label for="most_popular_staff">Most Popular Staff:</label>
+                      <input type="text" name="most_popular_staff" placeholder="Enter Most Popular Staff" required>
+                  </div>
 
 
                     <button type="submit">Submit Data</button>
                 </form>
 
+
                 <img src="{{ url_for('static', filename='mainplot.png') }}" alt="Weekly Income Chart">
+
 
                 <div class="existing-weekly-data">
                     {% for data in weekly_data %}
                         <div class="data">
-                            <p><strong>Week {{ data.week }}</strong> - Total Income: ${{ data.total_income }} - Highest Spend: ${{ data.highest_spend }} - Best Selling Item: {{ data.best_selling_item }} - Worst Selling Item: {{ data.worst_selling_item }} - MVP Staff Member: {{ data.mvp_staff_member }} - Average Basket Spend: ${{ data.average_basket_spend }}</p>
-                            <hr>
+                            <p><strong>Week {{ data.week }}</strong>
+                            <br>Total Items: ${{ data.total_items }}
+                            <br>Most Popular Items: ${{ data.most_popular_items }}
+                            <br>Least Popular Items: ${{ data.least_populat_items }}
+                            <br>Total Cost: ${{ data.total_cost }}
+                            <br>Max Cost: ${{ data.max_cost }}
+                            <br>Min Cost: ${{ data.min_cost }}
+                            <br>Average Cost: ${{ data.average_cost }}
+                            <br>Least Popular Payment: ${{ data.least_popular_payment }}
+                            <br>Most Popular Staff: ${{ data.most_popular_staff }}
+                            </p>
                         </div>
+
+
                     {% endfor %}
                 </div>
             </div>
