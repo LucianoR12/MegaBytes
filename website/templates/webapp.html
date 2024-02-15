@@ -47,107 +47,220 @@
         <label for="tab8"><i class="icon-coffee"></i>SUN</label>
 
 
-        <input type="radio" name="pcss3t" id="tab9" class="tab-content-9">
-        <label for="tab9"><i class="icon-coffee"></i>WEEK</label>
+        <input type="radio" name="pcss3t" id="tab11" class="tab-content-11">
+        <label for="tab11"><i class="icon-cloud-download"></i>WEEK</label>
 
 
         <input type="radio" name="pcss3t" id="tab10" class="tab-content-10">
-        <label for="tab10"><i class="icon-home"></i>STAFF</label>
+        <label for="tab10"><i class="icon-user"></i>STAFF</label>
+
+
+        <input type="radio" name="pcss3t" id="tab9" class="tab-content-9">
+        <label for="tab9"><i class="icon-cloud-upload"></i>INPUT</label>
 
 
         <ul>
           <li class="tab-content tab-content-1 typography">
             <h1>Home</h1>
-            <p>Statistical Data
               <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Week Data">
-              <img src="{{ url_for('static', filename='images/palette.png') }}" alt="Week Data">
-            </p>
+              <p>Welcome User to the Mega Bytes Admin system, here you can store daily Data which will give our Management, HR and Promotions team an insite to the ongoings in the store from Individual Staff Data to monitary data and Item data so we can see what procuts are hot and what are not. Youw will find the application easy to use as you can navigate each day to see statistics and we have an input page to enter and ammend data, we also have a staff data page where we can track who our best performing members of staff.</p>
           </li>
 
 
           <li class="tab-content tab-content-2 typography">
             <h1>Monday Data</h1>
-            <p>Statistical Data For Monday
+            <p>Statistical Data For Monday</p>
+            <p>See "Cost Made by Payment" On The Left</p>
+            <p>See "Cost Made by Staff" On The Right</p>
               <img src="{{ url_for('static', filename='images/mon_p.png') }}" alt="Monday Data">
               <img src="{{ url_for('static', filename='images/mon_s.png') }}" alt="Monday Data">
-            </p>
+              <div class="existing-weekly-data">
+                {% if weekly_data[0] %}
+                  <p>
+                    <br><h3>{{ weekly_data[0].day }}</h3>
+                    <br>Total Items: {{ weekly_data[0].total_items }}
+                    <br>Most Popular Items: {{ weekly_data[0].most_popular_item }}
+                    <br>Least Popular Items: {{ weekly_data[0].least_popular_item }}
+                    <br>Total Cost: £{{ weekly_data[0].total_cost }}
+                    <br>Max Cost: £{{ weekly_data[0].max_cost }}
+                    <br>Min Cost: £{{ weekly_data[0].min_cost }}
+                    <br>Average Cost: £{{ weekly_data[0].average_cost }}
+                    <br>Least Popular Payment: {{ weekly_data[0].least_popular_payment }}
+                    <br>Most Popular Staff: {{ weekly_data[0].most_popular_staff }}
+                  </p>
+                {% endif %}
           </li>
 
 
           <li class="tab-content tab-content-3 typography">
             <h1>Tuesday Data</h1>
-            <p>Statistical Data For Tuesday
+            <p>Statistical Data For Tuesday</p>
+            <p>See "Cost Made by Payment" On The Left</p>
+            <p>See "Cost Made by Staff" On The Right</p>
               <img src="{{ url_for('static', filename='images/tue_p.png') }}" alt="Tuesday Data">
               <img src="{{ url_for('static', filename='images/tue_s.png') }}" alt="Tuesday Data">
-            </p>
+              <div class="existing-weekly-data">
+                {% if weekly_data[1] %}
+                  <p>
+                    <br><h3>{{ weekly_data[1].day }}</h3>
+                    <br>Total Items: {{ weekly_data[1].total_items }}
+                    <br>Most Popular Items: {{ weekly_data[1].most_popular_item }}
+                    <br>Least Popular Items: {{ weekly_data[1].least_popular_item }}
+                    <br>Total Cost: £{{ weekly_data[1].total_cost }}
+                    <br>Max Cost: £{{ weekly_data[1].max_cost }}
+                    <br>Min Cost: £{{ weekly_data[1].min_cost }}
+                    <br>Average Cost: £{{ weekly_data[1].average_cost }}
+                    <br>Least Popular Payment: {{ weekly_data[1].least_popular_payment }}
+                    <br>Most Popular Staff: {{ weekly_data[1].most_popular_staff }}
+                  </p>
+                {% endif %}
           </li>
 
 
           <li class="tab-content tab-content-4 typography">
             <h1>Wednesday Data</h1>
-            <p>Statistical Data For Wednesday
+            <p>Statistical Data For Wednesday</p>
+            <p>See "Cost Made by Payment" On The Left</p>
+            <p>See "Cost Made by Staff" On The Right</p>
               <img src="{{ url_for('static', filename='images/wed_p.png') }}" alt="Wednesday Data">
               <img src="{{ url_for('static', filename='images/wed_s.png') }}" alt="Wednesday Data">
-            </p>
+              <div class="existing-weekly-data">
+                {% if weekly_data[2] %}
+                  <p>
+                    <br><h3>{{ weekly_data[2].day }}</h3>
+                    <br>Total Items: {{ weekly_data[2].total_items }}
+                    <br>Most Popular Items: {{ weekly_data[2].most_popular_item }}
+                    <br>Least Popular Items: {{ weekly_data[2].least_popular_item }}
+                    <br>Total Cost: £{{ weekly_data[2].total_cost }}
+                    <br>Max Cost: £{{ weekly_data[2].max_cost }}
+                    <br>Min Cost: £{{ weekly_data[2].min_cost }}
+                    <br>Average Cost: £{{ weekly_data[2].average_cost }}
+                    <br>Least Popular Payment: {{ weekly_data[2].least_popular_payment }}
+                    <br>Most Popular Staff: {{ weekly_data[2].most_popular_staff }}
+                  </p>
+                {% endif %}
           </li>
 
 
           <li class="tab-content tab-content-5 typography">
             <h1>Thursday Data</h1>
-            <p>Statistical Data For Thursday
+            <p>Statistical Data For Thursday</p>
+            <p>See "Cost Made by Payment" On The Left</p>
+            <p>See "Cost Made by Staff" On The Right</p>
               <img src="{{ url_for('static', filename='images/thu_p.png') }}" alt="Thursday Data">
               <img src="{{ url_for('static', filename='images/thu_s.png') }}" alt="Thursday Data">
-            </p>
+              <div class="existing-weekly-data">
+                {% if weekly_data[3] %}
+                  <p>
+                    <br><h3>{{ weekly_data[3].day }}</h3>
+                    <br>Total Items: {{ weekly_data[3].total_items }}
+                    <br>Most Popular Items: {{ weekly_data[3].most_popular_item }}
+                    <br>Least Popular Items: {{ weekly_data[3].least_popular_item }}
+                    <br>Total Cost: £{{ weekly_data[3].total_cost }}
+                    <br>Max Cost: £{{ weekly_data[3].max_cost }}
+                    <br>Min Cost: £{{ weekly_data[3].min_cost }}
+                    <br>Average Cost: £{{ weekly_data[3].average_cost }}
+                    <br>Least Popular Payment: {{ weekly_data[3].least_popular_payment }}
+                    <br>Most Popular Staff: {{ weekly_data[3].most_popular_staff }}
+                  </p>
+                {% endif %}
           </li>
 
 
           <li class="tab-content tab-content-6 typography">
             <h1>Friday Data</h1>
-            <p>Statistical Data For Friday
+            <p>Statistical Data For Friday</p>
+            <p>See "Cost Made by Payment" On The Left</p>
+            <p>See "Cost Made by Staff" On The Right</p>
               <img src="{{ url_for('static', filename='images/fri_p.png') }}" alt="Friday Data">
               <img src="{{ url_for('static', filename='images/fri_s.png') }}" alt="Friday Data">
-            </p>
+              <div class="existing-weekly-data">
+                {% if weekly_data[4] %}
+                  <p>
+                    <br><h3>{{ weekly_data[4].day }}</h3>
+                    <br>Total Items: {{ weekly_data[4].total_items }}
+                    <br>Most Popular Items: {{ weekly_data[4].most_popular_item }}
+                    <br>Least Popular Items: {{ weekly_data[4].least_popular_item }}
+                    <br>Total Cost: £{{ weekly_data[4].total_cost }}
+                    <br>Max Cost: £{{ weekly_data[4].max_cost }}
+                    <br>Min Cost: £{{ weekly_data[4].min_cost }}
+                    <br>Average Cost: £{{ weekly_data[4].average_cost }}
+                    <br>Least Popular Payment: {{ weekly_data[4].least_popular_payment }}
+                    <br>Most Popular Staff: {{ weekly_data[4].most_popular_staff }}
+                  </p>
+                {% endif %}
           </li>
 
 
           <li class="tab-content tab-content-7 typography">
             <h1>Saturday Data</h1>
-            <p>Statistical Data For Saturday
+            <p>Statistical Data For Saturday</p>
+            <p>See "Cost Made by Payment" On The Left</p>
+            <p>See "Cost Made by Staff" On The Right</p>
               <img src="{{ url_for('static', filename='images/sat_p.png') }}" alt="Saturday Data">
               <img src="{{ url_for('static', filename='images/sat_s.png') }}" alt="Saturday Data">
-            </p>
+              <div class="existing-weekly-data">
+                {% if weekly_data[5] %}
+                  <p>
+                    <br><h3>{{ weekly_data[5].day }}</h3>
+                    <br>Total Items: {{ weekly_data[5].total_items }}
+                    <br>Most Popular Items: {{ weekly_data[5].most_popular_item }}
+                    <br>Least Popular Items: {{ weekly_data[5].least_popular_item }}
+                    <br>Total Cost: £{{ weekly_data[5].total_cost }}
+                    <br>Max Cost: £{{ weekly_data[5].max_cost }}
+                    <br>Min Cost: £{{ weekly_data[5].min_cost }}
+                    <br>Average Cost: £{{ weekly_data[5].average_cost }}
+                    <br>Least Popular Payment: {{ weekly_data[5].least_popular_payment }}
+                    <br>Most Popular Staff: {{ weekly_data[5].most_popular_staff }}
+                  </p>
+                {% endif %}
           </li>
 
 
           <li class="tab-content tab-content-8 typography">
             <h1>Sunday Data</h1>
-            <p>Statistical Data For Sunday
+            <p>Statistical Data For Sunday</p>
+            <p>See "Cost Made by Payment" On The Left</p>
+            <p>See "Cost Made by Staff" On The Right</p>
               <img src="{{ url_for('static', filename='images/sun_p.png') }}" alt="Sunday Data">
               <img src="{{ url_for('static', filename='images/sun_p.png') }}" alt="Sunday Data">
-            </p>
+              <div class="existing-weekly-data">
+                {% if weekly_data[6] %}
+                  <p>
+                    <br><h3>{{ weekly_data[6].day }}</h3>
+                    <br>Total Items: {{ weekly_data[6].total_items }}
+                    <br>Most Popular Items: {{ weekly_data[6].most_popular_item }}
+                    <br>Least Popular Items: {{ weekly_data[6].least_popular_item }}
+                    <br>Total Cost: £{{ weekly_data[6].total_cost }}
+                    <br>Max Cost: £{{ weekly_data[6].max_cost }}
+                    <br>Min Cost: £{{ weekly_data[6].min_cost }}
+                    <br>Average Cost: £{{ weekly_data[6].average_cost }}
+                    <br>Least Popular Payment: {{ weekly_data[6].least_popular_payment }}
+                    <br>Most Popular Staff: {{ weekly_data[6].most_popular_staff }}
+                  </p>
+                {% endif %}
           </li>
 
           
-          <!-- <li class="tab-content tab-content-9 typography">
+          <li class="tab-content tab-content-11 typography">
             <h1>Week</h1>
-            <p>Statistical Data For Week
+            <p>Statistical Data For Week</p>
+            <p>See "Cost Made by Payment"</p>
               <img src="{{ url_for('static', filename='images/week_p.png') }}" alt="Week Data">
-            </p>
-          </li> -->
+          </li>
 
 
           <li class="tab-content tab-content-10 typography">
             <h1>Staff Data</h1>
-            <p>Statistical Data For Staff
-              <img src="{{ url_for('static', filename='images/week_s.png') }}" alt="Week Data">
-            </p>
+            <p>Statistical Data For Staff</p>
+            <p>See "Cost Made by Staff"</p>
+              <img src="{{ url_for('static', filename='images/week_s.png') }}" alt="Staff Data">
           </li>
 
-          
+
           <li class="tab-content tab-content-9 typography">
             <div class="typography">
-                <h1>Weekly Data</h1>
-
+                <h1>Manual Data Input</h1>
 
                 <form action="/weekly_data" method="POST" class="screen-content">
                     <div class="form-group">
@@ -155,60 +268,50 @@
                         <input type="text" name="day" placeholder="Enter Day" required>
                     </div>
 
-
                     <div class="form-group">
                       <label for="total_items">Total Items:</label>
                       <input type="number" name="total_items" placeholder="Enter Total Items" required>
                   </div>
-
 
                   <div class="form-group">
                     <label for="most_popular_item">Most Popular Item:</label>
                     <input type="text" name="most_popular_item" placeholder="Enter Most Popular Item" required>
                 </div>
 
-
                     <div class="form-group">
                         <label for="least_popular_item">Least Popular Item:</label>
                         <input type="text" name="least_popular_item" placeholder="Enter Least Popular Item" required>
                     </div>
-
 
                     <div class="form-group">
                         <label for="total_cost">Total Cost:</label>
                         <input type="number" name="total_cost" placeholder="Enter Total Cost" required>
                     </div>
 
-
                     <div class="form-group">
                         <label for="max_cost">Max Cost:</label>
                         <input type="number" name="max_cost" placeholder="Enter Max Cost" required>
                     </div>
-
 
                     <div class="form-group">
                       <label for="min_cost">Min Cost:</label>
                       <input type="number" name="min_cost" placeholder="Enter Min Cost" required>
                   </div>
 
-
                   <div class="form-group">
                     <label for="average_cost">Average Cost:</label>
                     <input type="number" name="average_cost" placeholder="Enter Average Cost" required>
                 </div>
-
 
                     <div class="form-group">
                         <label for="least_popular_payment">Least Popular Payment:</label>
                         <input type="text" name="least_popular_payment" placeholder="Enter Least Popular Payment" required>
                     </div>
 
-
                     <div class="form-group">
                       <label for="most_popular_staff">Most Popular Staff:</label>
                       <input type="text" name="most_popular_staff" placeholder="Enter Most Popular Staff" required>
                   </div>
-
 
                     <button type="submit">Submit Data</button>
                 </form>
@@ -217,26 +320,8 @@
                 <!-- <img src="{{ url_for('static', filename='mainplot.png') }}" alt="Weekly Income Chart"> -->
 
 
-                <div class="existing-weekly-data">
-                  {% for day, data_list in data_by_day.items() %}
-                      <div class="tab-content-{{ day|lower }} typography" {% if current_day == day %}style="display: block;"{% endif %}>
-                          <h1>{{ day }}</h1>
-                          {% for data in data_list %}
-                              <p><strong>Day {{ data.day }}</strong>
-                                  <br>Total Items: {{ data.total_items }}
-                                  <br>Most Popular Items: {{ data.most_popular_item }}
-                                  <br>Least Popular Items: {{ data.least_popular_item }}
-                                  <br>Total Cost: £{{ data.total_cost }}
-                                  <br>Max Cost: £{{ data.max_cost }}
-                                  <br>Min Cost: £{{ data.min_cost }}
-                                  <br>Average Cost: £{{ data.average_cost }}
-                                  <br>Least Popular Payment: {{ data.least_popular_payment }}
-                                  <br>Most Popular Staff: {{ data.most_popular_staff }}
-                              </p>
-                          {% endfor %}
-                      </div>
-                  {% endfor %}
-              </div>
+                </div>
+                </div>
                 </div>
             </div>
         </li>
