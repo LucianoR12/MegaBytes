@@ -12,6 +12,7 @@
 <body>
     <div class="page">
         <h1>MEGA BYTES ADMIN</h1>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Week Data">
 
 
         <div class="pcss3t pcss3t-effect-scale pcss3t-theme-1">
@@ -47,33 +48,31 @@
         <label for="tab8"><i class="icon-coffee"></i>SUN</label>
 
 
-        <input type="radio" name="pcss3t" id="tab11" class="tab-content-11">
-        <label for="tab11"><i class="icon-cloud-download"></i>WEEK</label>
+        <input type="radio" name="pcss3t" id="tab11" class="tab-content-9">
+        <label for="tab11"><i class="icon-money"></i>WEEK</label>
 
 
         <input type="radio" name="pcss3t" id="tab10" class="tab-content-10">
         <label for="tab10"><i class="icon-user"></i>STAFF</label>
 
 
-        <input type="radio" name="pcss3t" id="tab9" class="tab-content-9">
+        <input type="radio" name="pcss3t" id="tab9" class="tab-content-11">
         <label for="tab9"><i class="icon-cloud-upload"></i>INPUT</label>
 
 
         <ul>
           <li class="tab-content tab-content-1 typography">
             <h1>Home</h1>
-              <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Week Data">
               <p>Welcome User to the Mega Bytes Admin system, here you can store daily Data which will give our Management, HR and Promotions team an insite to the ongoings in the store from Individual Staff Data to monitary data and Item data so we can see what procuts are hot and what are not. Youw will find the application easy to use as you can navigate each day to see statistics and we have an input page to enter and ammend data, we also have a staff data page where we can track who our best performing members of staff.</p>
           </li>
 
 
           <li class="tab-content tab-content-2 typography">
             <h1>Monday Data</h1>
-            <p>Statistical Data For Monday</p>
-            <p>See "Cost Made by Payment" On The Left</p>
-            <p>See "Cost Made by Staff" On The Right</p>
-              <img src="{{ url_for('static', filename='images/mon_p.png') }}" alt="Monday Data">
-              <img src="{{ url_for('static', filename='images/mon_s.png') }}" alt="Monday Data">
+            <p>Cost Made by Payment
+              <img src="{{ url_for('static', filename='images/mon_p.png') }}" alt="Monday Data"></p>
+            <p>Cost Made by Staff
+              <img src="{{ url_for('static', filename='images/mon_s.png') }}" alt="Monday Data"></p>
               <div class="existing-weekly-data">
                 {% if weekly_data[0] %}
                   <p>
@@ -94,11 +93,10 @@
 
           <li class="tab-content tab-content-3 typography">
             <h1>Tuesday Data</h1>
-            <p>Statistical Data For Tuesday</p>
-            <p>See "Cost Made by Payment" On The Left</p>
-            <p>See "Cost Made by Staff" On The Right</p>
-              <img src="{{ url_for('static', filename='images/tue_p.png') }}" alt="Tuesday Data">
-              <img src="{{ url_for('static', filename='images/tue_s.png') }}" alt="Tuesday Data">
+            <p>Cost Made by Payment
+              <img src="{{ url_for('static', filename='images/tue_p.png') }}" alt="Tuesday Data"></p>
+            <p>Cost Made by Staff
+              <img src="{{ url_for('static', filename='images/tue_s.png') }}" alt="Tuesday Data"></p>
               <div class="existing-weekly-data">
                 {% if weekly_data[1] %}
                   <p>
@@ -119,11 +117,10 @@
 
           <li class="tab-content tab-content-4 typography">
             <h1>Wednesday Data</h1>
-            <p>Statistical Data For Wednesday</p>
-            <p>See "Cost Made by Payment" On The Left</p>
-            <p>See "Cost Made by Staff" On The Right</p>
-              <img src="{{ url_for('static', filename='images/wed_p.png') }}" alt="Wednesday Data">
-              <img src="{{ url_for('static', filename='images/wed_s.png') }}" alt="Wednesday Data">
+            <p>Cost Made by Payment
+              <img src="{{ url_for('static', filename='images/wed_p.png') }}" alt="Wednesday Data"></p>
+            <p>Cost Made by Staff
+              <img src="{{ url_for('static', filename='images/wed_s.png') }}" alt="Wednesday Data"></p>
               <div class="existing-weekly-data">
                 {% if weekly_data[2] %}
                   <p>
@@ -144,11 +141,10 @@
 
           <li class="tab-content tab-content-5 typography">
             <h1>Thursday Data</h1>
-            <p>Statistical Data For Thursday</p>
-            <p>See "Cost Made by Payment" On The Left</p>
-            <p>See "Cost Made by Staff" On The Right</p>
-              <img src="{{ url_for('static', filename='images/thu_p.png') }}" alt="Thursday Data">
-              <img src="{{ url_for('static', filename='images/thu_s.png') }}" alt="Thursday Data">
+            <p>Cost Made by Payment
+              <img src="{{ url_for('static', filename='images/thu_p.png') }}" alt="Thursday Data"></p>
+            <p>Cost Made by Staff
+              <img src="{{ url_for('static', filename='images/thu_s.png') }}" alt="Thursday Data"></p>
               <div class="existing-weekly-data">
                 {% if weekly_data[3] %}
                   <p>
@@ -169,11 +165,10 @@
 
           <li class="tab-content tab-content-6 typography">
             <h1>Friday Data</h1>
-            <p>Statistical Data For Friday</p>
-            <p>See "Cost Made by Payment" On The Left</p>
-            <p>See "Cost Made by Staff" On The Right</p>
-              <img src="{{ url_for('static', filename='images/fri_p.png') }}" alt="Friday Data">
-              <img src="{{ url_for('static', filename='images/fri_s.png') }}" alt="Friday Data">
+            <p>Cost Made by Payment
+              <img src="{{ url_for('static', filename='images/fri_p.png') }}" alt="Friday Data"></p>
+            <p>Cost Made by Staff
+              <img src="{{ url_for('static', filename='images/fri_s.png') }}" alt="Friday Data"></p>
               <div class="existing-weekly-data">
                 {% if weekly_data[4] %}
                   <p>
@@ -194,11 +189,10 @@
 
           <li class="tab-content tab-content-7 typography">
             <h1>Saturday Data</h1>
-            <p>Statistical Data For Saturday</p>
-            <p>See "Cost Made by Payment" On The Left</p>
-            <p>See "Cost Made by Staff" On The Right</p>
-              <img src="{{ url_for('static', filename='images/sat_p.png') }}" alt="Saturday Data">
-              <img src="{{ url_for('static', filename='images/sat_s.png') }}" alt="Saturday Data">
+            <p>Cost Made by Payment
+              <img src="{{ url_for('static', filename='images/sat_p.png') }}" alt="Saturday Data"></p>
+            <p>Cost Made by Staff
+              <img src="{{ url_for('static', filename='images/sat_s.png') }}" alt="Saturday Data"></p>
               <div class="existing-weekly-data">
                 {% if weekly_data[5] %}
                   <p>
@@ -219,11 +213,10 @@
 
           <li class="tab-content tab-content-8 typography">
             <h1>Sunday Data</h1>
-            <p>Statistical Data For Sunday</p>
-            <p>See "Cost Made by Payment" On The Left</p>
-            <p>See "Cost Made by Staff" On The Right</p>
-              <img src="{{ url_for('static', filename='images/sun_p.png') }}" alt="Sunday Data">
-              <img src="{{ url_for('static', filename='images/sun_p.png') }}" alt="Sunday Data">
+            <p>Cost Made by Payment
+              <img src="{{ url_for('static', filename='images/sun_p.png') }}" alt="Sunday Data"></p>
+            <p>Cost Made by Staff
+              <img src="{{ url_for('static', filename='images/sun_p.png') }}" alt="Sunday Data"></p>
               <div class="existing-weekly-data">
                 {% if weekly_data[6] %}
                   <p>
@@ -241,24 +234,33 @@
                 {% endif %}
           </li>
 
-          
-          <li class="tab-content tab-content-11 typography">
-            <h1>Week</h1>
-            <p>Statistical Data For Week</p>
-            <p>See "Cost Made by Payment"</p>
-              <img src="{{ url_for('static', filename='images/week_p.png') }}" alt="Week Data">
+
+          <li class="tab-content tab-content-9 typography">
+            <h1>Weekly Data</h1>
+            <p>Cost Made by Payment
+              <img src="{{ url_for('static', filename='images/week_p.png') }}" alt="Week Data"></p>
+            <p>Cost Made by Payment - Manual Data Input
+              <img src="{{ url_for('static', filename='weekly_income_chart.png') }}" alt="Week Data"></p>
           </li>
 
 
           <li class="tab-content tab-content-10 typography">
             <h1>Staff Data</h1>
-            <p>Statistical Data For Staff</p>
-            <p>See "Cost Made by Staff"</p>
-              <img src="{{ url_for('static', filename='images/week_s.png') }}" alt="Staff Data">
+            <p>Cost Made by Staff
+              <img src="{{ url_for('static', filename='images/week_s.png') }}" alt="Staff Data"></p>
+            <p>Cost Made by Payment - Manual Data Input
+              <img src="{{ url_for('static', filename='weekly_staff_chart.png') }}" alt="Staff Data"></p>
+            <p>We were asked to go over some data to decide what staff member is deserving of a promotion.
+              <br>We anasyled the amount of takings that were made each day to decide who the best functioning member of staff is but remember we cannot factor in things such as work station clenliness, personal hygene and their overall eye for work (i.e Noticing restocks, helping staff and customers).
+              <br>So based of a purely monitary basis we found that Charlie is the MVP for staff takings, followed by Hayley and 3rd Olu, like we said though theres are money based statistics and might not reflect actual work ethic and staff presentation so those final factors will have to be decided by Supervising staff on site!
+              <br>Final Rankings:
+              <br>1st Charlie
+              <br>2nd Hannah
+              <br>3rd Olu</p>
           </li>
 
 
-          <li class="tab-content tab-content-9 typography">
+          <li class="tab-content tab-content-11 typography">
             <div class="typography">
                 <h1>Manual Data Input</h1>
 

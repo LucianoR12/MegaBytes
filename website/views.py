@@ -7,7 +7,6 @@ from collections import defaultdict
 
 my_view = Blueprint("my_view", __name__)
 
-
 @my_view.route('/')
 def index():
     weekly_data = WeeklyData.query.all()
@@ -17,6 +16,11 @@ def index():
 def generate_weekly_income_chart(weekly_data):
     weeks = [data.day for data in weekly_data]
     total_cost = [data.total_cost for data in weekly_data]
+    weekly_totals = defaultdict(float)
+    for data in weekly_data:
+        weekly_totals[data.day] += data.total_cost
+        days = list(weekly_totals.keys())
+    total_costs = list(weekly_totals.values())
 
     plt.bar(weeks, total_cost, color='skyblue')
     plt.xlabel('Week')
@@ -24,6 +28,13 @@ def generate_weekly_income_chart(weekly_data):
     plt.title('Weekly Total Cost')
 
     plt.savefig("website/static/mainplot.png", format='png')
+
+    plt.bar(days, total_costs, color='skyblue')
+    plt.xlabel('Day of the Week')
+    plt.ylabel('Total Revenue')
+    plt.title('Weekly Total Revenue')
+
+    plt.savefig("website/static/weekly_income_chart.png", format='png')
 
 @my_view.route('/weekly_data', methods=['POST'])
 def submit_weekly_data():
