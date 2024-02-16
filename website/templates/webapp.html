@@ -91,10 +91,15 @@
           <li class="tab-content tab-content-2 typography">
             <h2>Monday Data</h2>
             <div class="box">
-            <h3>Cost Made by Payment
-              <img src="{{ url_for('static', filename='images/mon_p.png') }}" alt="Monday Data"></h3>
-            <h3>Cost Made by Staff
-              <img src="{{ url_for('static', filename='images/mon_s.png') }}" alt="Monday Data"></h3>
+            <div>
+            <h3>Cost Made by Payment</h3>
+              <img src="{{ url_for('static', filename='images/mon_p.png') }}" alt="Monday Data">
+            </div>
+            <div>
+            <h3>Cost Made by Staff</h3>
+              <img src="{{ url_for('static', filename='images/mon_s.png') }}" alt="Monday Data">
+            </div>
+              <div>
               <div class="existing-weekly-data">
                 {% if weekly_data[0] %}
                   <h3>{{ weekly_data[0].day }}</h3>
@@ -112,6 +117,7 @@
                 {% endif %}
             </div>
             </div>
+            </div>
               <form action="{{ url_for('my_view.edit', weeklydata_id=weekly_data[0].id) }}" method="post">
                   <input type="text" name="edit_task" required>
                   <button type="submit" class="edit-button">Edit</button>
@@ -125,10 +131,15 @@
           <li class="tab-content tab-content-3 typography">
             <h2>Tuesday Data</h2>
             <div class="box">
-            <h3>Cost Made by Payment
-              <img src="{{ url_for('static', filename='images/tue_p.png') }}" alt="Tuesday Data"></h3>
-            <h3>Cost Made by Staff
-              <img src="{{ url_for('static', filename='images/tue_s.png') }}" alt="Tuesday Data"></h3>
+            <div>
+            <h3>Cost Made by Payment</h3>
+              <img src="{{ url_for('static', filename='images/tue_p.png') }}" alt="Tuesday Data">
+            </div>
+            <div>
+            <h3>Cost Made by Staff</h3>
+              <img src="{{ url_for('static', filename='images/tue_s.png') }}" alt="Tuesday Data">
+            </div>
+              <div>
               <div class="existing-weekly-data">
                 {% if weekly_data[1] %}
                   <h3>{{ weekly_data[1].day }}</h3>
@@ -145,6 +156,8 @@
                   </h4>
                 {% endif %}
             </div>
+            </div>
+            </div>
                 <form action="{{ url_for('my_view.edit', weeklydata_id=weekly_data[1].id) }}" method="post">
                   <input type="text" name="edit_task" required>
                   <button type="submit" class="edit-button">Edit</button>
@@ -158,10 +171,15 @@
           <li class="tab-content tab-content-4 typography">
             <h2>Wednesday Data</h2>
             <div class="box">
-            <h3>Cost Made by Payment
-              <img src="{{ url_for('static', filename='images/wed_p.png') }}" alt="Wednesday Data"></h3>
-            <h3>Cost Made by Staff
-              <img src="{{ url_for('static', filename='images/wed_s.png') }}" alt="Wednesday Data"></h3>
+            <div>
+            <h3>Cost Made by Payment</h3>
+              <img src="{{ url_for('static', filename='images/wed_p.png') }}" alt="Wednesday Data">
+            </div>
+            <div>
+            <h3>Cost Made by Staff</h3>
+              <img src="{{ url_for('static', filename='images/wed_s.png') }}" alt="Wednesday Data">
+            </div>
+            <div>
               <div class="existing-weekly-data">
                 {% if weekly_data[2] %}
                   <h3>{{ weekly_data[2].day }}</h3>
@@ -178,6 +196,8 @@
                   </h4>
                 {% endif %}
             </div>
+            </div>
+            </div>
                 <form action="{{ url_for('my_view.edit', weeklydata_id=weekly_data[2].id) }}" method="post">
                   <input type="text" name="edit_task" required>
                   <button type="submit" class="edit-button">Edit</button>
@@ -191,10 +211,15 @@
           <li class="tab-content tab-content-5 typography">
             <h2>Thursday Data</h2>
             <div class="box">
-            <h3>Cost Made by Payment
-              <img src="{{ url_for('static', filename='images/thu_p.png') }}" alt="Thursday Data"></h3>
-            <h3>Cost Made by Staff
-              <img src="{{ url_for('static', filename='images/thu_s.png') }}" alt="Thursday Data"></h3>
+            <div>
+            <h3>Cost Made by Payment</h3>
+              <img src="{{ url_for('static', filename='images/thu_p.png') }}" alt="Thursday Data">
+            </div>
+            <div>
+            <h3>Cost Made by Staff</h3>
+              <img src="{{ url_for('static', filename='images/thu_s.png') }}" alt="Thursday Data">
+            </div>
+              <div>
               <div class="existing-weekly-data">
                 {% if weekly_data[3] %}
                   <h3>{{ weekly_data[3].day }}</h3>
@@ -211,6 +236,8 @@
                   </h4>
                 {% endif %}
             </div>
+            </div>
+            </div>
                 <form action="{{ url_for('my_view.edit', weeklydata_id=weekly_data[3].id) }}" method="post">
                   <input type="text" name="edit_task" required>
                   <button type="submit" class="edit-button">Edit</button>
@@ -224,10 +251,15 @@
           <li class="tab-content tab-content-6 typography">
             <h2>Friday Data</h2>
             <div class="box">
-            <h3>Cost Made by Payment
-              <img src="{{ url_for('static', filename='images/fri_p.png') }}" alt="Friday Data"></h3>
-            <h3>Cost Made by Staff
-              <img src="{{ url_for('static', filename='images/fri_s.png') }}" alt="Friday Data"></h3>
+            <div>
+            <h3>Cost Made by Payment</h3>
+              <img src="{{ url_for('static', filename='images/fri_p.png') }}" alt="Friday Data">
+            </div>
+            <div>
+            <h3>Cost Made by Staff</h3>
+              <img src="{{ url_for('static', filename='images/fri_s.png') }}" alt="Friday Data">
+            </div>
+              <div>
               <div class="existing-weekly-data">
                 {% if weekly_data[4] %}
                   <h3>{{ weekly_data[4].day }}</h3>
@@ -244,6 +276,8 @@
                   </h4>
                 {% endif %}
             </div>
+            </div>
+            </div>
                 <form action="{{ url_for('my_view.edit', weeklydata_id=weekly_data[4].id) }}" method="post">
                   <input type="text" name="edit_task" required>
                   <button type="submit" class="edit-button">Edit</button>
@@ -257,10 +291,15 @@
           <li class="tab-content tab-content-7 typography">
             <h2>Saturday Data</h2>
             <div class="box">
-            <h3>Cost Made by Payment
-              <img src="{{ url_for('static', filename='images/sat_p.png') }}" alt="Saturday Data"></h3>
-            <h3>Cost Made by Staff
-              <img src="{{ url_for('static', filename='images/sat_s.png') }}" alt="Saturday Data"></h3>
+            <div>
+            <h3>Cost Made by Payment</h3>
+              <img src="{{ url_for('static', filename='images/sat_p.png') }}" alt="Saturday Data">
+            </div>
+            <div>
+            <h3>Cost Made by Staff</h3>
+              <img src="{{ url_for('static', filename='images/sat_s.png') }}" alt="Saturday Data">
+            </div>
+              <div>
               <div class="existing-weekly-data">
                 {% if weekly_data[5] %}
                   <h3>{{ weekly_data[5].day }}</h3>
@@ -277,6 +316,8 @@
                   </h4>
                 {% endif %}
             </div>
+            </div>
+            </div>
                 <form action="{{ url_for('my_view.edit', weeklydata_id=weekly_data[5].id) }}" method="post">
                   <input type="text" name="edit_task" required>
                   <button type="submit" class="edit-button">Edit</button>
@@ -290,10 +331,15 @@
           <li class="tab-content tab-content-8 typography">
             <h2>Sunday Data</h2>
             <div class="box">
-            <h3>Cost Made by Payment
-              <img src="{{ url_for('static', filename='images/sun_p.png') }}" alt="Sunday Data"></h3>
-            <h3>Cost Made by Staff
-              <img src="{{ url_for('static', filename='images/sun_p.png') }}" alt="Sunday Data"></h3>
+            <div>
+            <h3>Cost Made by Payment</h3>
+              <img src="{{ url_for('static', filename='images/sun_p.png') }}" alt="Sunday Data">
+            </div>
+            <div>
+            <h3>Cost Made by Staff</h3>
+              <img src="{{ url_for('static', filename='images/sun_p.png') }}" alt="Sunday Data">
+            </div>
+            <div>
               <div class="existing-weekly-data">
                 {% if weekly_data[6] %}
                   <h3>{{ weekly_data[6].day }}</h3>
@@ -310,6 +356,8 @@
                   </h4>
                 {% endif %}
             </div>
+            </div>
+            </div>
                 <form action="{{ url_for('my_view.edit', weeklydata_id=weekly_data[6].id) }}" method="post">
                   <input type="text" name="edit_task" required>
                   <button type="submit" class="edit-button">Edit</button>
@@ -323,13 +371,19 @@
           <li class="tab-content tab-content-9 typography">
             <h2>Weekly Data</h2>
             <div class="box">
-            <h3>Cost Made by Payment
-              <img src="{{ url_for('static', filename='images/week_p.png') }}" alt="Week Data"></h3>
-            <h3>Cost Made by Payment - Manual Data Input
-              <img src="{{ url_for('static', filename='weekly_income_chart.png') }}" alt="Week Data"></h3>
+            <div>
+            <h3>Cost Made by Payment</h3>
+              <img src="{{ url_for('static', filename='images/week_p.png') }}" alt="Week Data">
+            </div>
+            <div>
+            <h3>Cost Made by Payment - Manual Data Input</h3>
+              <img src="{{ url_for('static', filename='weekly_income_chart.png') }}" alt="Week Data">
+            </div>
+            <div>
             <h4>Payment Method Breakdown:
             <br>We were asked by management if we could run the data to see if vouchers were a viable form of payment or if we would like to scrap the voucher program compleatly.
             <br>After looking at the numbers we do not reccomend scrapping the voucher program as it is the second most used payment method at roughly 15% of total income.</h4>
+            </div>
             </div>
           </li>
 
@@ -337,10 +391,15 @@
           <li class="tab-content tab-content-10 typography">
             <h2>Staff Data</h2>
             <div class="box">
-            <h3>Cost Made by Staff
-              <img src="{{ url_for('static', filename='images/week_s.png') }}" alt="Staff Data"></h3>
-            <h3>Cost Made by Payment - Manual Data Input
-              <img src="{{ url_for('static', filename='mvp_pie_chart.png') }}" alt="MVP Pie Chart"></h3>
+            <div>
+            <h3>Cost Made by Staff</h3>
+              <img src="{{ url_for('static', filename='images/week_s.png') }}" alt="Staff Data">
+            </div>
+            <div>
+            <h3>Cost Made by Payment - Manual Data Input</h3>
+              <img src="{{ url_for('static', filename='mvp_pie_chart.png') }}" alt="MVP Pie Chart">
+            </div>
+            <div>
               <h4>We were asked to go over some data to decide what staff member is deserving of a promotion.
                 <br>We analysed the amount of takings that were made each day to decide who the best functioning member of staff is but remember we cannot factor in things such as work station cleanliness, personal hygiene and their overall eye for work (i.e Noticing restocks, helping staff and customers).
                 <br>So based purely off the two parameters one of which was a daily leader in takings and the other being a weekly total in takings we found that Olu was leading the Daily with 57.1% followed by Alex who had 42.9%, these two members of staff are the leaders for daily takings and currently no one else takes more than them on shift.
@@ -349,6 +408,7 @@
                 <br>We do recommend the position to be given to either Olu or Charlie based on statistics this should be decided on the data we provided along with factors like supervisory tasks and other on-site management duties if and when required.
                 <br>With all these factors and the factual data generated within the app you should be able to make an informed choice on your next promotion!
                 <br>Good Luck in your decision.</h4>
+            </div>
             </div>
           </li>
 
