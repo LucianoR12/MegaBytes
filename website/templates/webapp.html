@@ -7,6 +7,27 @@
     <title>MEGA BYTES ADMIN</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='webapp.css') }}">
+
+  <script>
+      function showPopupNote() {
+          alert(
+              "- Luciano;\n" +
+              "- Benelli;\n" +
+              "- Roberto;\n" +
+              "for Megabytes Cafe sponsored by codenation")
+      }
+  </script>
+
+  <button class="features-button" onclick="showPopupNote()">CR34T3D FE8 2024 8Y</button>
+  
+  {% if message %}
+      {% if message_type == 'error' %}
+          <div class="error-message">{{ message }}</div>
+      {% elif message_type == 'success' %}
+          <div class="success-message">{{ message }}</div>
+      {% endif %}
+  {% endif %}
+
 </head>
 
 <body>
@@ -88,6 +109,14 @@
                     <br>Most Popular Staff: {{ weekly_data[0].most_popular_staff }}
                   </p>
                 {% endif %}
+                <form action="{{ url_for('my_view.edit', weeklydata_id=weekly_data[0].id) }}" method="post">
+                  <label for="edit_task">Edit Task:</label>
+                  <input type="text" name="edit_task" required>
+                  <button type="submit" class="edit-button">Edit</button>
+              </form>
+              <form action="{{ url_for('my_view.delete', weeklydata_id=weekly_data[0].id) }}" method="post" onsubmit="return confirm('Are you sure you want to delete this task?');">
+                  <button type="submit" class="delete-button">Delete</button>
+              </form>
           </li>
 
 
@@ -112,6 +141,14 @@
                     <br>Most Popular Staff: {{ weekly_data[1].most_popular_staff }}
                   </p>
                 {% endif %}
+                <form action="{{ url_for('my_view.edit', weeklydata_id=weekly_data[1].id) }}" method="post">
+                  <label for="edit_task">Edit Task:</label>
+                  <input type="text" name="edit_task" required>
+                  <button type="submit" class="edit-button">Edit</button>
+              </form>
+              <form action="{{ url_for('my_view.delete', weeklydata_id=weekly_data[1].id) }}" method="post" onsubmit="return confirm('Are you sure you want to delete this task?');">
+                  <button type="submit" class="delete-button">Delete</button>
+              </form>
           </li>
 
 
@@ -136,6 +173,14 @@
                     <br>Most Popular Staff: {{ weekly_data[2].most_popular_staff }}
                   </p>
                 {% endif %}
+                <form action="{{ url_for('my_view.edit', weeklydata_id=weekly_data[2].id) }}" method="post">
+                  <label for="edit_task">Edit Task:</label>
+                  <input type="text" name="edit_task" required>
+                  <button type="submit" class="edit-button">Edit</button>
+              </form>
+              <form action="{{ url_for('my_view.delete', weeklydata_id=weekly_data[2].id) }}" method="post" onsubmit="return confirm('Are you sure you want to delete this task?');">
+                  <button type="submit" class="delete-button">Delete</button>
+              </form>
           </li>
 
 
@@ -160,6 +205,14 @@
                     <br>Most Popular Staff: {{ weekly_data[3].most_popular_staff }}
                   </p>
                 {% endif %}
+                <form action="{{ url_for('my_view.edit', weeklydata_id=weekly_data[3].id) }}" method="post">
+                  <label for="edit_task">Edit Task:</label>
+                  <input type="text" name="edit_task" required>
+                  <button type="submit" class="edit-button">Edit</button>
+              </form>
+              <form action="{{ url_for('my_view.delete', weeklydata_id=weekly_data[3].id) }}" method="post" onsubmit="return confirm('Are you sure you want to delete this task?');">
+                  <button type="submit" class="delete-button">Delete</button>
+              </form>
           </li>
 
 
@@ -184,6 +237,14 @@
                     <br>Most Popular Staff: {{ weekly_data[4].most_popular_staff }}
                   </p>
                 {% endif %}
+                <form action="{{ url_for('my_view.edit', weeklydata_id=weekly_data[4].id) }}" method="post">
+                  <label for="edit_task">Edit Task:</label>
+                  <input type="text" name="edit_task" required>
+                  <button type="submit" class="edit-button">Edit</button>
+              </form>
+              <form action="{{ url_for('my_view.delete', weeklydata_id=weekly_data[4].id) }}" method="post" onsubmit="return confirm('Are you sure you want to delete this task?');">
+                  <button type="submit" class="delete-button">Delete</button>
+              </form>
           </li>
 
 
@@ -208,6 +269,14 @@
                     <br>Most Popular Staff: {{ weekly_data[5].most_popular_staff }}
                   </p>
                 {% endif %}
+                <form action="{{ url_for('my_view.edit', weeklydata_id=weekly_data[5].id) }}" method="post">
+                  <label for="edit_task">Edit Task:</label>
+                  <input type="text" name="edit_task" required>
+                  <button type="submit" class="edit-button">Edit</button>
+              </form>
+              <form action="{{ url_for('my_view.delete', weeklydata_id=weekly_data[5].id) }}" method="post" onsubmit="return confirm('Are you sure you want to delete this task?');">
+                  <button type="submit" class="delete-button">Delete</button>
+              </form>
           </li>
 
 
@@ -232,6 +301,14 @@
                     <br>Most Popular Staff: {{ weekly_data[6].most_popular_staff }}
                   </p>
                 {% endif %}
+                <form action="{{ url_for('my_view.edit', weeklydata_id=weekly_data[6].id) }}" method="post">
+                  <label for="edit_task">Edit Task:</label>
+                  <input type="text" name="edit_task" required>
+                  <button type="submit" class="edit-button">Edit</button>
+              </form>
+              <form action="{{ url_for('my_view.delete', weeklydata_id=weekly_data[6].id) }}" method="post" onsubmit="return confirm('Are you sure you want to delete this task?');">
+                  <button type="submit" class="delete-button">Delete</button>
+              </form>
           </li>
 
 
@@ -241,6 +318,9 @@
               <img src="{{ url_for('static', filename='images/week_p.png') }}" alt="Week Data"></p>
             <p>Cost Made by Payment - Manual Data Input
               <img src="{{ url_for('static', filename='weekly_income_chart.png') }}" alt="Week Data"></p>
+            <p>Payment Method Breakdown:
+            <br>We were asked by management if we could run the data to see if vouchers were a viable form of payment or if we would like to scrap the voucher program compleatly.
+            <br>After looking at the numbers we do not reccomend scrapping the voucher program as it is the second most used payment method at roughly 15% of total income.</p>
           </li>
 
 
@@ -249,14 +329,15 @@
             <p>Cost Made by Staff
               <img src="{{ url_for('static', filename='images/week_s.png') }}" alt="Staff Data"></p>
             <p>Cost Made by Payment - Manual Data Input
-              <img src="{{ url_for('static', filename='weekly_staff_chart.png') }}" alt="Staff Data"></p>
-            <p>We were asked to go over some data to decide what staff member is deserving of a promotion.
-              <br>We anasyled the amount of takings that were made each day to decide who the best functioning member of staff is but remember we cannot factor in things such as work station clenliness, personal hygene and their overall eye for work (i.e Noticing restocks, helping staff and customers).
-              <br>So based of a purely monitary basis we found that Charlie is the MVP for staff takings, followed by Hayley and 3rd Olu, like we said though theres are money based statistics and might not reflect actual work ethic and staff presentation so those final factors will have to be decided by Supervising staff on site!
-              <br>Final Rankings:
-              <br>1st Charlie
-              <br>2nd Hannah
-              <br>3rd Olu</p>
+              <img src="{{ url_for('static', filename='mvp_pie_chart.png') }}" alt="MVP Pie Chart"></p>
+              <p>We were asked to go over some data to decide what staff member is deserving of a promotion.
+                <br>We analysed the amount of takings that were made each day to decide who the best functioning member of staff is but remember we cannot factor in things such as work station cleanliness, personal hygiene and their overall eye for work (i.e Noticing restocks, helping staff and customers).
+                <br>So based purely off the two parameters one of which was a daily leader in takings and the other being a weekly total in takings we found that Olu was leading the Daily with 57.1% followed by Alex who had 42.9%, these two members of staff are the leaders for daily takings and currently no one else takes more than them on shift.
+                <br>Now when we look at the weekly totals we see another story Charlie is the MVP for staff takings for the week, followed by Hayley and 3rd Olu, where as Alex is the lowest weekly.
+                <br>We cannot take into account the hours each member of staff worked or how many days they work as well as money based statistics do not reflect actual work ethic and staff presentation so those final factors will have to be decided by supervising staff on site!
+                <br>We do recommend the position to be given to either Olu or Charlie based on statistics this should be decided on the data we provided along with factors like supervisory tasks and other on-site management duties if and when required.
+                <br>With all these factors and the factual data generated within the app you should be able to make an informed choice on your next promotion!
+                <br>Good Luck in your decision. </p>
           </li>
 
 
@@ -264,7 +345,8 @@
             <div class="typography">
                 <h1>Manual Data Input</h1>
 
-                <form action="/weekly_data" method="POST" class="screen-content">
+                <form action="{{ url_for('my_view.submit_weekly_data') }}" method="POST" class="screen-content">
+
                     <div class="form-group">
                         <label for="day">Day:</label>
                         <input type="text" name="day" placeholder="Enter Day" required>
@@ -317,10 +399,6 @@
 
                     <button type="submit">Submit Data</button>
                 </form>
-
-
-                <!-- <img src="{{ url_for('static', filename='mainplot.png') }}" alt="Weekly Income Chart"> -->
-
 
                 </div>
                 </div>

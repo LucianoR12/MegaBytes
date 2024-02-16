@@ -1,6 +1,5 @@
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
+from datetime import datetime
+from website import db
 
 class WeeklyData(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -14,3 +13,8 @@ class WeeklyData(db.Model):
     average_cost = db.Column(db.Float, nullable=False)
     least_popular_payment = db.Column(db.String(10), nullable=False)
     most_popular_staff = db.Column(db.String(10), nullable=False)
+    # complete = db.Column(db.Boolean, default = False)
+    date_created = db.Column(db.DateTime, default=datetime.utcnow)
+    date_edited = db.Column(db.DateTime, onupdate=datetime.utcnow)
+    # date_completed = db.Column(db.DateTime, default=None)
+    # date_deleted = db.Column(db.DateTime, default=datetime.utcnow)
