@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Gabriela);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* *{border: 1px black solid;} */
+
 
 html, body, div, h1, h2, h3, p, pre {
   margin: 0;
@@ -257,55 +259,39 @@ a:hover {
 
 .pcss3t .typography h1 {
   font-size: 40px;
-  line-height: 80px;
+  line-height: 60px;
   text-align: center;
   color: #ff7d00;
   text-shadow: 3px 3px rgba(0,0,0,0.1);
 }
 
 .pcss3t .typography h2 {
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 30px;
+  line-height: 45px;
   text-align: center;
   color: #ff7d00;
   text-shadow: 2px 2px rgba(0,0,0,0.1);
 }
 
 .pcss3t .typography h3 {
-  font-size: 26px;
-  line-height: 26px;
+  font-size: 20x;
+  line-height: 30x;
   text-align: center;
   color: #ff7d00;
   text-shadow: 1px 1px rgba(0,0,0,0.1);
 }
 
 .pcss3t .typography h4 {
-  font-size: 20px;
-  line-height: 20px;
-  text-align: center;
-  color: #ff7d00;
-  text-shadow: 1px 1px rgba(0,0,0,0.1);
-}
-
-.pcss3t .typography h5 {
-  font-size: 15px;
-  line-height: 15px;
-  text-align: center;
-  color: #ff7d00;
-  text-shadow: 1px 1px rgba(0,0,0,0.1);
-}
-
-.pcss3t .typography h6 {
   font-size: 12px;
-  line-height: 12px;
-  text-align: center;
-  color: #ff7d00;
+  line-height: 18px;
+  text-align: left;
+  color: #78290f;
   text-shadow: 1px 1px rgba(0,0,0,0.1);
 }
 
 .pcss3t .typography p {
   font-size: 10px;
-  line-height: 10px;
+  line-height: 15px;
   text-align: center;
   color: #ff7d00;
   text-shadow: 1px 1px rgba(0,0,0,0.1);
@@ -810,3 +796,13 @@ a:hover {
   height: 370px;
 }
 
+.box{
+  display: flex;
+  justify-content: space-around;
+}
+
+.box img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
